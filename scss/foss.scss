@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 /* font-family: 'Josefin Sans', sans-serif; */
+
+$bck-color: 0;
+
+@mixin blur-bck($color, $alpha: 0.1) {
+	background: rgba($color, $color, $color, $alpha);
+	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
 body {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
@@ -15,7 +24,7 @@ body {
 		color: rgb(238, 199, 25);
 
 		&:hover {
-			color: blue;
+			color: rgb(0, 255, 200);
 		}
 	}
 
@@ -30,27 +39,38 @@ body {
 			padding-top: 150px;
 			width: 100%;
 
-			background: rgba(0, 0, 0, 0.1);
-			backdrop-filter: saturate(180%) blur(20px);
-			-webkit-backdrop-filter: saturate(180%) blur(20px);
+			@include blur-bck($bck-color);
 
 			.title-wrapper {
 				display: flex;
-				justify-content: center;
-				padding: 20px 0;
+				flex-direction: column;
+				//justify-content: center;
+				align-items: center;
+				padding: 50px 0;
+				color: rgba(255, 255, 255, 1);
 
 				.title {
 					//background-color: lightblue;
 					width: fit-content;
 					text-align: center;
-					padding: 0 !important;
+					margin: -10px;
 
 					//font-family: sans-serif;
 					line-height: 10rem;
 					font-weight: 700;
 					font-size: 8rem;
+				}
 
-					color: rgba(255, 255, 255, 1);
+				.sub {
+					font-size: 1.5rem;
+
+					a {
+						color: #fff;
+
+						&:hover {
+							color: rgb(0, 255, 200);
+						}
+					}
 				}
 			}
 
@@ -76,9 +96,7 @@ body {
 						align-items: center;
 						justify-content: center;
 
-						background: rgba(255, 255, 255, 0.3);
-						backdrop-filter: saturate(180%) blur(20px);
-						-webkit-backdrop-filter: saturate(180%) blur(20px);
+						@include blur-bck($bck-color);
 
 						p {
 							margin: 5px 0 0 10px;
@@ -109,9 +127,7 @@ body {
 						border-radius: 10px;
 						border: none;
 
-						background: rgba(255, 255, 255, 0.5);
-						backdrop-filter: saturate(180%) blur(20px);
-						-webkit-backdrop-filter: saturate(180%) blur(20px);
+						@include blur-bck($bck-color);
 
 						&:hover {
 							cursor: pointer;
@@ -147,9 +163,7 @@ body {
 						border-radius: 20px;
 						margin-bottom: 40px;
 
-						background: rgba(255, 255, 255, 0.3);
-						backdrop-filter: saturate(180%) blur(20px);
-						-webkit-backdrop-filter: saturate(180%) blur(20px);
+						@include blur-bck(255, 0.25);
 
 						ul {
 							font-size: 1rem;
@@ -159,6 +173,62 @@ body {
 						&:hover {
 							transform: scale(1.05, 1.05);
 						}
+					}
+				}
+			}
+		}
+	}
+
+	.tech {
+		.container {
+			//background-color: lightblue;
+			padding: 130px 100px;
+
+			.section-title {
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				font-size: 5rem;
+				font-weight: 700;
+			}
+
+			.sub-heading {
+				font-size: 1.3rem;
+				text-align: center;
+			}
+
+			.row {
+				//justify-content: center;
+
+				.tech-stack-wrapper {
+					//background-color: lightblue;
+					margin: 20px;
+					height: 200px;
+					width: 200px;
+					padding: 50px 20px 20px 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					align-items: center;
+
+					border-radius: 20px;
+					@include blur-bck(255, 0.3);
+
+					transition-duration: 400ms;
+					&:hover {
+						transform: scale(1.1);
+					}
+
+					img {
+						width: 60%;
+					}
+
+					.sub-h {
+						margin-top: 20px;
+						color: #fff;
+						font-size: 1rem;
+						font-weight: 600;
+						letter-spacing: 1px;
 					}
 				}
 			}
