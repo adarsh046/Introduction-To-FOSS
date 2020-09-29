@@ -7,18 +7,25 @@ $accent-color: #4090bb;
 
 @media (min-width: 768px) {
 	header {
-		padding: 0;
+		padding: 5px;
 		margin: 0;
+
 		position: absolute;
+		z-index: 10000 !important;
+
 		top: 50px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 70%;
-		height: 30px;
-		z-index: 10000 !important;
-		background: rgba(0, 0, 0, 0.5);
+
+		width: 650px;
+		height: 40px;
+		border-radius: 500px;
+
+		//background: rgba(255, 255, 255, 0.2);
+		background: rgba(0, 0, 0, 0.2);
 		backdrop-filter: saturate(180%) blur(20px);
 		-webkit-backdrop-filter: saturate(180%) blur(20px);
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -27,48 +34,46 @@ $accent-color: #4090bb;
 			display: none;
 		}
 
-		.icon-apple {
-			display: none;
-		}
-
 		.menu {
-			list-style: none;
-			display: flex;
-			justify-content: space-between;
+			height: 100%;
+			width: 100%;
 			margin: 0;
 			padding: 0;
-			width: 73%;
-			//background-color: lightgreen;
+			list-style: none;
 
-			.logo-laptop {
-				margin-right: 50px;
-				padding: 0;
-				display: flex;
+			display: flex;
+			justify-content: space-between;
 
-				img {
-					height: 65%;
-					margin: 0 !important;
-				}
-
-				div {
-					height: 4px;
-					width: 4px;
-					border-radius: 50%;
-					background-color: $accent-color;
-					margin: 15px 0 0 3px;
-				}
+			li.active {
+				//background: rgba(255, 255, 255, 0.1);
+				background: rgba(0, 0, 0, 0.1);
+				backdrop-filter: saturate(180%) blur(20px);
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
 			}
 
 			li {
+				//background-color: lightblue;
+				padding: 0 20px;
+				border-radius: 500px;
+				line-height: 30px;
+
 				a {
 					text-decoration: none;
-					color: rgba(255, 255, 255, 0.8);
+					color: #fff;
 					font-family: $mukta;
-					font-size: 1rem;
+					font-size: 1.1rem;
+					font-weight: 700;
+					letter-spacing: 1px;
 
 					&:hover {
-						color: $accent-color;
+						color: #fff;
 					}
+				}
+
+				&:hover {
+					background: rgba(0, 0, 0, 0.1);
+					backdrop-filter: saturate(180%) blur(20px);
+					-webkit-backdrop-filter: saturate(180%) blur(20px);
 				}
 			}
 		}
