@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.foss {
+	a {
+		text-decoration: none;
+		color: rgb(238, 199, 25);
+
+		&:hover {
+			color: blue;
+		}
+	}
+
+	.container-fluid {
+		font-family: 'Josefin Sans', sans-serif;
+		padding: 0;
+		background-image: url('../assets/images/landing-page/bck-2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.overlay {
+			padding-top: 150px;
+			width: 100%;
+
+			background: rgba(0, 0, 0, 0.1);
+			backdrop-filter: saturate(180%) blur(20px);
+			-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+			.title-wrapper {
+				display: flex;
+				justify-content: center;
+				padding: 70px 0;
+
+				.title {
+					//background-color: lightblue;
+					width: fit-content;
+					text-align: center;
+					padding: 0 !important;
+
+					//font-family: sans-serif;
+					line-height: 10rem;
+					font-weight: 700;
+					font-size: 8rem;
+
+					color: rgba(255, 255, 255, 1);
+
+					transition-duration: 400ms;
+
+					/*&:hover {
+						color: rgba(0, 0, 0, 0);
+						-webkit-text-stroke: 1px #fff;
+					}*/
+				}
+			}
+
+			.main-content {
+				//background-color: lightgreen;
+				color: #fff;
+				font-size: 1.2rem;
+
+				.date-container {
+					//background-color: lightblue;
+					margin-top: 30px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-wrap: wrap;
+
+					.badge-wrapper {
+						height: 38px;
+						//background-color: lightsalmon;
+						padding: 20px;
+						border-radius: 7px;
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						background: rgba(255, 255, 255, 0.3);
+						backdrop-filter: saturate(180%) blur(20px);
+						-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+						p {
+							margin: 5px 0 0 10px;
+							line-height: 38px;
+						}
+					}
+
+					.badge-wrapper:first-child {
+						margin-right: 20px;
+					}
+				}
+
+				.register-btn-wrapper {
+					margin: 70px 0;
+					display: flex;
+					justify-content: center;
+
+					button {
+						height: 55px;
+						width: 170px;
+						line-height: 50px;
+
+						color: #fff;
+						font-weight: 600;
+						font-size: 1.4rem;
+
+						outline: none;
+						border-radius: 10px;
+						border: none;
+
+						background: rgba(255, 255, 255, 0.5);
+						backdrop-filter: saturate(180%) blur(20px);
+						-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+						&:hover {
+							cursor: pointer;
+						}
+
+						transition-duration: 200ms;
+
+						&:active {
+							transform: scale(0.9);
+						}
+					}
+				}
+
+				.info {
+					margin-top: 100px;
+					padding: 0 50px;
+					text-align: justify;
+
+					span {
+						font-weight: 700;
+					}
+				}
+
+				.box-container {
+					margin-top: 100px;
+					display: flex;
+					justify-content: space-evenly;
+					flex-wrap: wrap;
+
+					.box {
+						//width: 48%;
+						padding: 30px 40px;
+						border-radius: 20px;
+						margin-bottom: 40px;
+
+						background: rgba(255, 255, 255, 0.3);
+						backdrop-filter: saturate(180%) blur(20px);
+						-webkit-backdrop-filter: saturate(180%) blur(20px);
+
+						ul {
+							font-size: 1rem;
+						}
+
+						transition-duration: 300ms;
+						&:hover {
+							transform: scale(1.05, 1.05);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.foss {
+		.container-fluid {
+			.overlay {
+				.title-wrapper {
+					.title {
+						font-size: 3.5rem;
+						line-height: 4.5rem;
+					}
+				}
+
+				.main-content {
+					.date-container {
+						.badge-wrapper:first-child {
+							margin: 0 0 15px 0;
+						}
+					}
+
+					.info {
+						margin-top: 50px;
+						padding: 0 10px;
+
+						ul {
+							margin: 30px 0 30px -20px;
+							//background-color: lightblue;
+						}
+					}
+
+					.box-container {
+						margin-top: 50px;
+
+						.box {
+							width: 100%;
+							margin-bottom: 20px;
+							padding: 30px;
+
+							ul {
+								margin-left: -20px;
+							}
+						}
+
+						.box-4 {
+							ul {
+								text-align: justify;
+								font-size: 1.1rem;
+
+								li {
+									margin: 15px 0;
+								}
+							}
+						}
+
+						.box-1 {
+							ul {
+								li {
+									margin: 15px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
