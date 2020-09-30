@@ -19,7 +19,6 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="assets/css/card_hover.css" />
 
 		<!-- Main CSS Files -->
 		<link rel="stylesheet" href="../css/navbar.min.css" />
@@ -30,7 +29,7 @@
 		<main>
 			<div id="particles-js"></div>
 
-			<section class="landing-page">
+			<section id="landing-page" class="landing-page">
 				<!-- ======= Header ======= -->
 				<header>
 					<div class="burger-container">
@@ -47,8 +46,8 @@
 				</li>-->
 						<li class="menu-item"><a href="../index.html">Home</a></li>
 						<li class="menu-item"><a href="#">Instructions</a></li>
-						<li class="menu-item active"><a href="index.html#events">Mentors</a></li>
-						<li class="menu-item"><a href="index.html#projects">Contributions</a></li>
+						<li class="menu-item active"><a href="#">Mentors</a></li>
+						<li class="menu-item"><a href="#">Contributions</a></li>
 						<li class="menu-item"><a href="https://ennovab.tech/">Ennovab</a></li>
 					</ul>
 					<div class="shop icon icon-bag"></div>
@@ -212,13 +211,15 @@
 			</section>
 		</main>
 
-		<script src="assets/js/main.js"></script>
-		<script src="js/navbar.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<script src="../js/navbar.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 		<script>
 			particlesJS.load('particles-js', '../assets/particles.json', function () {
 				console.log('loadedddddddd..........');
 			});
+
+			document.getElementById('particles-js').style.height = document.getElementById('landing-page').style.backgroundColor;
 		</script>
 
 		<!-- Optional JavaScript -->

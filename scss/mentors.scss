@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+
 body {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
@@ -17,12 +20,10 @@ body {
 
 main {
 	width: 100%;
-	//padding: 100px 0;
-	//overflow-y: scroll;
-	//background-image: url('../assets/images/mentors/bck-3.jpg');
 	//background-color: #eccfab;
 	background-color: #343436;
 	background-size: contain;
+	//overflow: hidden;
 
 	#particles-js {
 		position: absolute;
@@ -31,7 +32,7 @@ main {
 	}
 
 	.landing-page {
-		padding: 130px;
+		padding: 130px 0;
 	}
 
 	.team {
@@ -42,6 +43,7 @@ main {
 			margin-bottom: 70px;
 			text-align: center;
 			color: #fff;
+			font-family: 'Josefin Sans', sans-serif;
 		}
 
 		.card-container {
@@ -123,6 +125,17 @@ main {
 					}
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	main {
+		.landing-page {
+			padding: 90px 0;
+		}
+		.team {
+			margin-top: 0;
 		}
 	}
 }
