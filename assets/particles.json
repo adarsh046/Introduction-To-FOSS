@@ -1,0 +1,40 @@
+{
+	"particles": {
+		"number": {
+			"value": 50
+		},
+		"color": {
+			"value": "#fff"
+		},
+		"size": {
+			"value": 4,
+			"random": true
+		},
+		"line-linked": {
+			"enable": true
+		},
+		"move": {
+			"enable": true,
+			"speed": 5
+		}
+	},
+
+	"interactivity": {
+		"events": {
+			"onhover": {
+				"enable": true,
+				"mode": "grab"
+			},
+			"onclick": {
+				"enable": true,
+				"mode": "repulse"
+			}
+		},
+		"modes": {
+			"bubble": {
+				"size": 40,
+				"duration": 0.4
+			}
+		}
+	}
+}

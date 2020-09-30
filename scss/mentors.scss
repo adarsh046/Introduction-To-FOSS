@@ -17,18 +17,31 @@ body {
 
 main {
 	width: 100%;
-	padding: 100px 0;
+	//padding: 100px 0;
 	//overflow-y: scroll;
 	//background-image: url('../assets/images/mentors/bck-3.jpg');
-	background-color: #eccfab;
+	//background-color: #eccfab;
+	background-color: #343436;
 	background-size: contain;
 
+	#particles-js {
+		position: absolute;
+		height: 250%;
+		width: 100%;
+	}
+
+	.landing-page {
+		padding: 130px;
+	}
+
 	.team {
+		position: relative;
 		margin-top: 60px;
 
 		.info {
 			margin-bottom: 70px;
 			text-align: center;
+			color: #fff;
 		}
 
 		.card-container {
