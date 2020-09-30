@@ -1,0 +1,115 @@
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+}
+
+main {
+	width: 100%;
+	padding: 100px 0;
+	//overflow-y: scroll;
+	//background-image: url('../assets/images/mentors/bck-3.jpg');
+	background-color: #eccfab;
+	background-size: contain;
+
+	.team {
+		margin-top: 60px;
+
+		.info {
+			margin-bottom: 70px;
+			text-align: center;
+		}
+
+		.card-container {
+			margin-top: 50px;
+
+			display: flex;
+			gap: 70px;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			//background-color: lightblue;
+
+			.team-card {
+				height: 350px;
+				width: 250px;
+				//background-color: lightblue;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
+				.img-wrapper {
+					height: 67%;
+					overflow: hidden;
+					border-radius: 20px;
+
+					box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1);
+					transition-duration: 400ms;
+
+					img {
+						height: 100%;
+					}
+
+					&:hover {
+						transform: scale(1.1, 1.1);
+					}
+				}
+
+				.name {
+					padding: 5px 20px;
+					background-color: #000;
+
+					color: #fff;
+					font-weight: 500;
+					letter-spacing: 1px;
+
+					border-radius: 10px;
+
+					box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+				}
+
+				.social-btn-container {
+					color: #fff;
+					display: flex;
+					gap: 10px;
+
+					div {
+						height: 2rem;
+						width: 2rem;
+						border-radius: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+						img {
+							width: 60%;
+						}
+					}
+
+					.linkedin {
+						background-color: #0077b5;
+					}
+
+					.github {
+						background-color: #000;
+					}
+				}
+			}
+		}
+	}
+}
