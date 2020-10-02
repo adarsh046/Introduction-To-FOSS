@@ -1,0 +1,46 @@
+main {
+	padding-top: 150px;
+	background-color: rgb(241, 229, 156);
+}
+
+.main-content {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		.contributer-card {
+			margin: 30px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.image-wrapper {
+				height: 300px;
+				width: 250px;
+
+				border-radius: 30px;
+				overflow: hidden;
+
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.name {
+				padding: 10px 20px;
+				margin-top: 20px;
+				background-color: #000;
+
+				color: #fff;
+				font-weight: 700;
+
+				border-radius: 15px;
+			}
+		}
+	}
+}
